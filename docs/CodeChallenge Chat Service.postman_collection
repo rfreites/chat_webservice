@@ -1,0 +1,187 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CodeChallenge Chat Service",
+		"_postman_id": "c4f98ef2-80a1-c6d2-fa65-347a3610fc8d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "chat",
+			"description": "",
+			"item": [
+				{
+					"name": "update chat",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/chats/1?name=a new title",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NjEwNzE4LCJleHAiOjE0ODg2MTQzMTgsIm5iZiI6MTQ4ODYxMDcxOCwianRpIjoiYzBjNmVmMjY0ZWYxMzQ0YWFhYjUzMzg1YzIwMjRhMWEifQ.s6uEjkiHPvBUf5-ENpL1HUyA9aCj5vzirR0JwE3lw8I",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "create chat",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/chats?name=A chat&message=my first chat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL3VzZXJzIiwiaWF0IjoxNDg4NTk2NTUxLCJleHAiOjE0ODg2MDAxNTEsIm5iZiI6MTQ4ODU5NjU1MSwianRpIjoiNjRmMTVhOGFjNzE4MmRkOWZhM2FlY2RlYWI1YmZkZGIifQ.iv1X3ch0zbFXM4njimPkKp-6DNcyqG5qpR7kP9smpAU",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "show chat",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/chats?page=1&limit=3",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NjA0NzI1LCJleHAiOjE0ODg2MDgzMjUsIm5iZiI6MTQ4ODYwNDcyNSwianRpIjoiZTEzYzFkZDRkNzU3ZmZmOGZiM2RiYzlmMDIyN2QxMTUifQ.LfrMS87bOLGlIJ9BYJvDeNXwaV0uMNXI89vGy9SKX5k",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"description": "",
+			"item": [
+				{
+					"name": "create message",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/chats/1/chat_messages?message=a new message to the chat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NjM0MDk0LCJleHAiOjE0ODg2Mzc2OTQsIm5iZiI6MTQ4ODYzNDA5NCwianRpIjoiNGY2NjVlN2M5YjFhNWRhNDdkNzlhMWFiNzhhZjYyOTEifQ.2CsNi3YoFVq0kHY1U-tbgDcYzHvkmrDFP1rv5Yl5NPM",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "show message pagination",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/chats/1/chat_messages?page=1&limit=2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NjM0MDk0LCJleHAiOjE0ODg2Mzc2OTQsIm5iZiI6MTQ4ODYzNDA5NCwianRpIjoiNGY2NjVlN2M5YjFhNWRhNDdkNzlhMWFiNzhhZjYyOTEifQ.2CsNi3YoFVq0kHY1U-tbgDcYzHvkmrDFP1rv5Yl5NPM",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"description": "",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/users?name=John Smith&email=john@orainteractive.com&password=secret&password_confirmation=secret",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "create user"
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/auth/login?email=john@orainteractive.com&password=secret",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/auth/current?name=Angelo&email=angelo@gmail.com.com&password=secret3&password_confirmation=secret3",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NTA5NDQ5LCJleHAiOjE0ODg1MTMwNDksIm5iZiI6MTQ4ODUwOTQ0OSwianRpIjoiMGYwMDBhMmIwNzIxOGYzMzQ0OTBiMjM4NmEzZGEwMGEifQ.QtHOvUsNIF9eY83EWspJKzVo86GWam5acL04kfZ3Xaw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "update user"
+					},
+					"response": []
+				},
+				{
+					"name": "logout user",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/auth/logout",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NTEwNzgxLCJleHAiOjE0ODg1MTQzODEsIm5iZiI6MTQ4ODUxMDc4MSwianRpIjoiNjJhMTE4OTAzOGUyMGVhMmEwMDNkZjMwZDczYjJkZjIifQ.3-IA45q207bPEmg94B8obN6S7dzY0cFUPJCxawNarCU",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "current user",
+					"request": {
+						"url": "http://127.0.0.1:8888/api/auth/current",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cLzEyNy4wLjAuMTo4ODg4XC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNDg4NTEwODY1LCJleHAiOjE0ODg1MTQ0NjUsIm5iZiI6MTQ4ODUxMDg2NSwianRpIjoiNGJkZjc2NDFmOTBkZDBlMDQ4NjhiMWMyNzk0MDU2NDUifQ.X9FpuBgVi9hY-HIqu1wcz59pAdYT3KKMSrQ41O6e0NY",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
