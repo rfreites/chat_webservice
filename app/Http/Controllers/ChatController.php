@@ -60,7 +60,7 @@ class ChatController extends Controller
 
 			if ($total_request <= $count && !is_null($count))
 			{
-				$chats = Chat::paginate($limit);
+				$chats = Chat::orderBy('created_at','desc')->paginate($limit);
 
 				foreach($chats as $chat)
 				{
@@ -116,6 +116,8 @@ class ChatController extends Controller
 
 						$result[] = $data;
 					}
+
+					$result = array_reverse($result);
 				}
 			}
 
@@ -152,6 +154,8 @@ class ChatController extends Controller
 
 				$result[] = $data;
 			}
+
+			$result = array_reverse($result);
 		}
 
 		if (!empty($result))

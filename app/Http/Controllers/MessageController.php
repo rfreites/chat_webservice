@@ -52,7 +52,8 @@ class MessageController extends Controller
 
 			if ($total_request <= $count && !is_null($count))
 			{
-				$messages = Message::paginate($limit);
+
+				$messages = Message::orderBy('created_at','desc')->paginate($limit);
 
 				foreach($messages as $message)
 				{
@@ -91,6 +92,8 @@ class MessageController extends Controller
 
 						$result[] = $data;
 					}
+
+					$result = array_reverse($result);
 				}
 			}
 
@@ -120,6 +123,8 @@ class MessageController extends Controller
 
 				$result[] = $data;
 			}
+
+			$result = array_reverse($result);
 		}
 
 		if (!empty($result))
